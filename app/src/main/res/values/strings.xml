@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="access_token">pk.eyJ1IjoiZGVtYXNtYW1hcyIsImEiOiJjanRrMmJiM3UwNzNwNGFxM2tiMXdzbWUxIn0.SFfpDq8j1fZp4M9xoJQxlA</string>
+    <string name="move_map_instruction">Move map to place\nmarker at desired location</string>
+    <string name="location_picker_select_location_button_cancel">Cancel</string>
+    <string name="location_picker_select_location_button_select">Select a location</string>
+    <string name="location_picker_dropped_marker_snippet_no_results">No results</string>
+    <string name="location_picker_place_name_result">Place name: </string>
+</resources>

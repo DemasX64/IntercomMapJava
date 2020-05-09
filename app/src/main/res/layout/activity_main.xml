@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.mapbox.mapboxsdk.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.mapbox.mapboxsdk.maps.MapView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:background="@drawable/map_button"
+                android:id="@+id/addCode"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="fitCenter"
+                android:padding="10dp"
+                android:tint="#777777"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_post_add" />
+
+            <ImageView
+                android:background="@drawable/map_button"
+                android:id="@+id/plus"
+                android:scaleType="fitCenter"
+                android:padding="10dp"
+                android:tint="#777777"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addCode"
+                app:srcCompat="@drawable/ic_add" />
+
+            <ImageView
+                android:id="@+id/minus"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/map_button"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:tint="#777777"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/plus"
+                app:srcCompat="@drawable/ic_remove" />
+
+            <ImageView
+                android:id="@+id/myLocation"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/map_button"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:tint="#777777"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/minus"
+                app:srcCompat="@drawable/ic_gps" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/bottom_add_marker"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        android:background="@drawable/rounded_layout"
+        app:behavior_hideable="true">
+
+        <TextView
+            android:id="@+id/number"
+            android:padding="20dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1234"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="24sp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/bottom_add_code"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        android:background="@drawable/rounded_layout"
+        app:behavior_hideable="true">
+
+        <TextView
+            android:id="@+id/coordinates"
+            android:padding="20dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="coordinates"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="24sp"/>
+        <TextView
+            android:id="@+id/code"
+            android:padding="20dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="code"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="24sp"/>
+        <TextView
+            android:id="@+id/button"
+            android:padding="20dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Добавить"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="24sp"/>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
